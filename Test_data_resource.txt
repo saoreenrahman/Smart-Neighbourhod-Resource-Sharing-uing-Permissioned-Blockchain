@@ -1,0 +1,45 @@
+ODir data input:
+
+Resource1:
+Oid: 12345
+OName:Tom's Trip To Moon 
+OPublishDate: 16 Oct 2021
+Pid(user's name): ABC123
+ODesc: Tom's Trip to Moon is a story of a child who dreams to travel to moon someday.
+Otype: Movie
+OPrimaryDesc: Video Quality: HD, Size: 16MB
+OCategory: Cartoon
+((age  > 10) and (club membership = club1))
+
+Resource2:
+Oid: 67890
+OName:Jerry's Travel Vlog
+OPublishDate: 15 Oct 2021
+Pid(user's name): ABC123
+ODesc: A story of Jerry's travel around the world
+Otype: Movie
+OPrimaryDesc: Video Quality: HD, Size: 2MB
+OCategory: fantasy
+age>10
+
+Resource3:
+Oid: 114567
+OName: The Great Chef
+OPublishDate: 17 Oct 2021
+Pid(user's name): XYZ789
+ODesc: A story of great chef
+Otype: e-book
+OPrimaryDesc: Pages 160
+OCategory: Novel
+age>15 and preference=international
+
+Resource4:
+Oid: 56987
+OName: Mountain Fall Calor
+OPublishDate: 17 Oct 2021
+Pid(user's name): XYZ789
+ODesc: A image of rocky mountain fall color
+Otype: Image
+OPrimaryDesc: Size: 3.5Mb, Format:JPEG 
+OCategory: Scenery
+(neighbourhood = calgary) or (club membership = club2)
