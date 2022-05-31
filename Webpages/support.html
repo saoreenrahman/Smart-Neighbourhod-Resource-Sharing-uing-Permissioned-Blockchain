@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="UTF-8">
+    <title>Support- Smart Neighbourhood</title>
+
+    <!-- ====== Google Fonts ====== -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet">
+
+     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/lightbox.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+
+
+
+    <style>
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: gray;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+label{
+  display: inline-block;
+  background-color: #E49B0F;
+  color: white;
+  padding: 0.5rem;
+  font-family: sans-serif;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  border-radius: 12px;
+  width: 100px;
+  font-size: 15px;
+}
+
+
+
+</style>
+
+</head>
+
+<body data-spy="scroll" data-target=".navbar-nav" onload="load_username()">
+
+    <!-- ====== Header ====== -->
+    <header id="header" class="header">
+        <!-- ====== Navbar ====== -->
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand logo" href="index.html">
+                    <img src="assets/images/TRY_TRY.png" alt="logo">
+                </a>
+                <!-- // Logo -->
+
+                <!-- Mobile Menu -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-expanded="false"><span><i class="fa fa-bars"></i></span></button>
+                <!-- Mobile Menu -->
+
+                 <div class="collapse navbar-collapse main-menu" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active"><a class="nav-link" href="http://localhost:4000/index_main.html">HOME</a></li>
+
+                         <div class="dropdown">
+                        <li class="nav-item"><a class="nav-link "><span id="user"></span></a></li>
+
+                        <div class="dropdown-content">
+                        <li class="nav-item"><a class="nav-link" onclick="logout()">LOGOUT</a></li>
+                        </div>
+                        </div>
+
+                        <div class="dropdown">
+                        <li class="nav-item"><a class="nav-link" href="http://localhost:4000/after_login.html">MENU</a></li>
+                        <div class="dropdown-content">
+                        <li class="nav-item"><a class="nav-link pr0" href="http://localhost:4000/add_resource_metadata.html">ADD RESOURCES</a></li>
+                        <li class="nav-item"><a class="nav-link pr0" href="http://localhost:4000/view_resource.html">VIEW RESOURCES</a></li>
+                        <li class="nav-item"><a class="nav-link pr0" href="http://localhost:4000/glosary.html">Glosary</a></li>
+                        </div>
+                        </div>
+
+                        <li class="nav-item"><a class="nav-link active" href="http://localhost:4000/support.html">SUPPORT</a></li>
+
+                        <li class="nav-item"><a class="nav-link pr0" href="http://localhost:4000/Contact_Us.html">CONTACT US</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- ====== // Navbar ====== -->
+
+        <!-- Page Title -->
+    <div class="page-title bg-img section-padding bg-overlay" style="background-image: url(assets/images/1.png); height:50px; margin-right:-120px ;">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6 text-center">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // Page Title -->
+    </header>
+    <!-- ====== // Header ====== -->
+
+<div style = " margin-right:-120px ;">
+
+        <!-- ====== Contact Area ====== -->
+    <div align="center" >    
+    <section class="blog-section">
+        <div class="page-title bg-img section-padding bg-overlay" style="background-image: url(assets/images/5.jpg);height:600px;  margin-top:-95px; margin-bottom:-50px;">
+        <div class="container">
+
+            <!-- Section Title -->
+            <div class="row justify-content-center">
+                <div class="col-lg-6 " style="margin-top:-50px ;">
+                    <div class="section-title text-center">
+                        <h2>HOW CAN WE HELP?</h2>
+                        <h4>LET US KNOW YOUR COMPLAIN!</h4>
+                    </div>
+                </div>
+            </div>
+            <!-- //Section Title -->
+
+            <!-- Contact Form -->
+            <div class="row justify-content-center" >
+                <div class="col-lg-10" style="margin-top:-30px ; ">
+                    <!-- Form -->
+                    <form>
+                <!--
+                    <div class="row">
+                    <div class="pull-left" >
+                    <button class="btn btn-info" data-toggle="tooltip1" data-placement="left" title="Resource Name, e.g Tom's Trip to Moon  etc."><i class="fa fa-info-circle"></i></button>
+                    </div>
+                            <div class="col-lg-6 form-group">
+                            
+                                <input type="text" id="o_name"  class="form-control" style="width: 800px"  name="name" required placeholder="Resource Name*" required>
+                            </div>
+                    </div>
+                -->
+
+                        <div class="row">
+                        <div class="pull-left" >
+                        <button class="btn btn-info" data-toggle="tooltip2" data-placement="left" title="Resource ID, e.g 1234556789 etc."><i class="fa fa-info-circle"></i></button>
+                        </div>
+
+
+                            <div class="col-lg-6 form-group">
+                                <input type="text" id="o_id" class="form-control" style="width: 800px" name="description" required placeholder="Resource ID*" required>
+                            </div>
+                        </div>
+
+                         <div class="row">
+                    <div class="pull-left" >
+                    <button class="btn btn-info" data-toggle="tooltip5" data-placement="left" title="Resourc Owner"><i class="fa fa-info-circle"></i></button>
+                    </div>
+                            <div class="col-lg-6 form-group">
+                                <input type="text"  class="form-control" style="width: 800px"  name="name" required placeholder="Resource Owner*" id="o_owner" required>
+                            </div>
+                    </div>
+
+
+                        <div class="row">
+                        <div class="pull-left" >
+                        <button class="btn btn-info" data-toggle="tooltip4" data-placement="left" title="Time when you found out about the misbehavior"><i class="fa fa-info-circle"></i></button>
+                        </div>
+
+                        <div class="col-lg-6 form-group">
+                            <input type="text" id="o_misb_time" class="form-control" style="width: 800px" name="Time to Misbehavior" required placeholder="Time to Misbehavior*" required>
+                        </div>
+
+                        </div>
+
+                        <div class="row">
+                        <div class="pull-left" >
+                        <button class="btn btn-info" data-toggle="tooltip3" data-placement="left" title="Description of misbehavior"><i class="fa fa-info-circle"></i></button>
+                        </div>
+                        
+                            <div class=" col-lg-6 form-group">
+                            <textarea name="message" style="width: 800px; height: 70px;"  id="o_misb_desc" class="form-control" required placeholder="Description of misbehavior*" required></textarea>
+                        </div>
+                        </div>    
+                    </form>
+
+                        <br>
+
+                        <div class="form-btn text-center">
+
+                            <button type="button" id="decrypt_metadata" class="btn btn-warning" style="font-size:20px" onclick="misbehavior_submit()">Submit</button>
+                           
+                        </div>
+
+                        <br>
+                        
+                       
+                    
+
+                    <!-- // Form -->
+                </div>
+
+            </div>
+            <!-- // Contact Form -->
+            
+        </div>
+    </div>
+    </section>
+
+    </div>
+    <!-- ====== // Contact Area ====== -->
+</div>
+
+<div style="margin-top:-15px; width:1800px">
+    <!-- ====== Footer Area ====== -->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="copyright-text">
+                        <p class="text-white">© 2021 <a href="https://github.com/mnr-18/Privacy-preserving-Resource-Sharing">Privacy Preserving Resource Sharing System</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ====== // Footer Area ====== -->
+
+</div>
+    <!-- ====== ALL JS ====== -->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/lightbox.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/jquery.mixitup.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/typed.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script type="text/javascript" src="http://getbootstrap.com/2.3.2/assets/js/bootstrap-tooltip.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" ></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    
+<script type="text/javascript">
+    (function() {
+        $('[data-toggle="tooltip1"]').tooltip();
+        $('[data-toggle="tooltip2"]').tooltip();
+        $('[data-toggle="tooltip3"]').tooltip();
+        $('[data-toggle="tooltip4"]').tooltip();
+        $('[data-toggle="tooltip5"]').tooltip();
+    })();
+</script>
+
+
+<script type="text/javascript">
+
+  load_username = function(){
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+     var response = JSON.parse(xhttp.responseText);
+      //var  response = xhttp.responseText;
+            
+            const res = response.name;
+
+            const capitalized = res.toUpperCase();
+            console.log(capitalized);
+            
+            document.getElementById("user").innerHTML= capitalized;
+            //document.getElementById("user_name").innerHTML= capitalized;
+            
+            
+    }
+  };
+  
+  xhttp.open("GET", "http://localhost:4000/load_username", true);
+  xhttp.send();
+}
+//..............................................
+
+logout = function(){
+console.log("Request to logout");
+
+          var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+            
+            //var response = JSON.parse(xhttp.responseText);
+            var  response = xhttp.responseText;
+           console.log('logout response back:',response);
+            
+           if(response == 0){
+            window.location.replace('http://localhost:4000/index_main.html');
+           }
+           
+
+       }//end of xhttp.ready state condition
+
+       if(xhttp.readyState==4 && xhttp.status==403){
+
+                      alert("Session End.LogIn again");
+                    }
+    };
+    
+    xhttp.open("GET", "http://localhost:4000/logout", true);
+    xhttp.setRequestHeader("Content-type", 'application/json; charset=UTF-8')
+    //xhttp.send(JSON.stringify(data));
+    xhttp.send();
+
+}
+
+//.........................................
+
+
+//Start Function create_cpabe_metadata()
+misbehavior_submit= function(){
+          
+    //var data1 = document.getElementById("o_name").value;
+    var data1 = "name";
+    var data2 = document.getElementById("o_id").value;
+    var data3 = document.getElementById("o_owner").value;
+    var data4 = document.getElementById("o_misb_time").value;
+    var data5 = document.getElementById("o_misb_desc").value;
+
+ if(data1.length === 0){
+    alert("please provide resource name!")
+ }
+
+ if(data2.length === 0){
+    alert("please provide resource id!")
+ }
+
+ if(data3.length === 0){
+    alert("please provide resource owner name!")
+ }
+
+if(data4.length === 0){
+    alert("please provide time-frame of misbehavior!")
+ }
+
+if(data5.length === 0){
+    alert("please provide the description of misbehavior!")
+ }
+
+  if( data1.length !== 0 && data2.length !== 0 && data3.length !== 0 && data4.length !== 0 && data5.length !== 0){
+
+    data={name:data1,id:data2,owner:data3, time: data4, desc: data5}
+    console.log(data);
+
+    console.log("Send data to server Create");
+    var xhttp = new XMLHttpRequest();
+
+
+    xhttp.onreadystatechange = function() {
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+            //var response = JSON.parse(xhttp.responseText);
+            var response = xhttp.responseText;
+
+            console.log(response);
+            
+            const _ans = response;
+            if(_ans === 'yes') {
+  //code goes here
+  alert("Your Complain have been submitted!");
+
+}// end of ans===yes condition   
+
+
+if(_ans === 'no') {
+  //code goes here
+  alert("Error in information confirmation!");
+
+}// end of _ans === 'no1' condition   
+
+
+       }//end of xhttp.ready state condition
+
+       if(xhttp.readyState==4 && xhttp.status==403){
+                      
+                      alert("Session End.LogIn again");
+                    }
+    };
+    xhttp.open("POST", "http://localhost:4000/misbehavior_submit", true);
+    xhttp.setRequestHeader("Content-type", 'application/json; charset=UTF-8')
+    //xhttp.send();
+    xhttp.send(JSON.stringify(data));
+
+} //end of if( data4===data5) condition
+
+                      
+} //End Function misbehavior_submit()
+
+
+//.........................................
+
+
+
+</script>
+
+    
+</body>
+
+</html>

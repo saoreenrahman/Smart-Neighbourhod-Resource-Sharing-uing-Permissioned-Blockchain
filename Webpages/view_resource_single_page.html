@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="UTF-8">
+    <title>View Resource - Smart Neighbourhood</title>
+
+    <!-- ====== Google Fonts ====== -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet">
+
+     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/lightbox.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <style>
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: gray;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+label{
+  display: inline-block;
+  background-color: #E49B0F;
+  color: white;
+  padding: 0.5rem;
+  font-family: sans-serif;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  border-radius: 12px;
+  width: 100px;
+  font-size: 14px;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  margin-right: 70px;
+  margin-left: -100px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 12px 100px;
+  transition: 0.3s;
+  font-size: 24px;
+  margin-left: 180px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 60px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  margin-right: 70px;
+  margin-left: -100px;
+  background-color: white;
+}
+
+
+</style>
+
+</head>
+
+<body data-spy="scroll" data-target=".navbar-nav" onload="view_single_resource_info()">
+
+    <!-- ====== Header ====== -->
+    <header id="header" class="header">
+        <!-- ====== Navbar ====== -->
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand logo" href="index.html">
+                    <img src="assets/images/TRY_TRY.png" alt="logo">
+                </a>
+                <!-- // Logo -->
+
+                <!-- Mobile Menu -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-expanded="false"><span><i class="fa fa-bars"></i></span></button>
+                <!-- Mobile Menu -->
+
+                 <div class="collapse navbar-collapse main-menu" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active"><a class="nav-link" href="http://localhost:4000/index_main.html">HOME</a></li>
+
+                         <div class="dropdown">
+                        <li class="nav-item"><a class="nav-link "><span id="user"></span></a></li>
+
+                        <div class="dropdown-content">
+                        <li class="nav-item"><a class="nav-link" onclick="logout()">LOGOUT</a></li>
+                        </div>
+                        </div>
+
+                        <div class="dropdown">
+                        <li class="nav-item"><a class="nav-link active" href="http://localhost:4000/after_login.html">MENU</a></li>
+                        <div class="dropdown-content">
+                        <li class="nav-item"><a class="nav-link pr0" href="http://localhost:4000/add_resource_metadata.html">ADD RESOURCES</a></li>
+                        <li class="nav-item"><a class="nav-link pr0" href="http://localhost:4000/view_resource.html">VIEW RESOURCES</a></li>
+                        <li class="nav-item"><a class="nav-link pr0" href="http://localhost:4000/glosary.html">Glosary</a></li>
+                        </div>
+                        </div>
+
+                        <li class="nav-item"><a class="nav-link " href="http://localhost:4000/support.html">SUPPORT</a></li>
+
+                        <li class="nav-item"><a class="nav-link pr0" href="http://localhost:4000/Contact_Us.html">CONTACT US</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- ====== // Navbar ====== -->
+
+        <!-- Page Title -->
+        <div class="page-title bg-img section-padding bg-overlay" style="background-image: url(assets/images/1.png); height:50px;">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6 text-center">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // Page Title -->
+    </header>
+    <!-- ====== // Header ====== -->
+
+<div style = " padding-left: 100px;">
+
+        <!-- ====== Contact Area ====== -->
+    <div align="center" >    
+ <section class="blog-section">
+   <!--  <div class="page-title bg-img section-padding bg-overlay" style="background-image: url(assets/images/5.jpg); width:880px;height:700px; margin-left:-380px; margin-top:-70px; margin-bottom:-50px;" > -->
+
+    <div class="page-title bg-img section-padding bg-overlay" style="background-image: url(assets/images/5.jpg);height:1180px;  margin-top:-95px; margin-bottom:-50px; margin-left:-100px">
+        <div class="container">
+            <!-- Section Title -->
+            <div class="row justify-content-center">
+                <div class="col-lg-6 ">
+                    <div class="section-title text-center" style="margin-top:-100px;">
+                        <h2>View Resources</h2> 
+                    </div>
+                </div>
+            </div>
+            <!-- //Section Title -->
+
+
+
+
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="blog-area">
+
+
+<div align="left">
+
+<div class="tab">
+  <button class="tablinks">Product Details</button>
+  
+</div>
+
+<div id=div1 style="display:block" class="tabcontent" >
+<!--
+<h3 class="tab-title">Product Description</h3>
+-->
+                                <table class="table table-bordered product-table" style="margin-top: -20px;">
+                                    <tbody>
+                                        <tr>
+                                            <td>Resource Name</td>
+                                            <td><span id="resource0_name"></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Resource ID</td>
+                                            <td><span id="resource0_id"></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Resource Type</td>
+                                            <td><span id="resource0_type"></span></td>
+                                        </tr>
+                                        
+                                        
+                                        <tr>
+                                            <td>Resource Cetagory</td>
+                                            <td><span id="resource0_category"></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Resource Owner</td>
+                                            <td><span id="resource0_owner"></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Resource Properties</td>
+                                            <td><span id="resource0_property"></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Resource Description</td>
+                                            <td><span id="resource0_desc"></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Publish Date</td>
+                                            <td><span id="resource0_date"></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Resource Access Policy</td>
+                      <td>
+                      <span id="resource0_p1"></span> <br>
+                      </td>
+                    </td>
+                                        </tr>
+                                        <tr>
+                                        <td>Resource Certificate</td>
+                       <td>
+                      <span id="resource0_cert1"></span>
+                      <button type="button" id="cert_all_info" class="btn btn-warning" style="margin-left: 90px;" onclick="cert_all_info()">Details</button>
+                      <div id=div2 style="display:block">
+                          <span id="cert"></span>
+                      </div>
+
+                      </td> 
+                       </tr>
+                                        
+                                    </tbody>
+                                </table>
+                                
+</div>
+
+
+</div>
+
+
+                <div class="row">
+
+                    <div class="col-lg-7" style="margin-left: 120px;">
+                    </div>
+                </div>
+                        
+                    </div>
+                </div>
+                
+                <!-- Sidebar -->
+                <div class="col-lg-4">
+                    <div class="blog-sidebar" style="margin-left:-80px">
+                        
+                        <!-- Sidebar Widget 
+                        <div class="sidebar-widget">
+                            <h3 class="sidebar-title" style="color: white; margin-bottom: -40px ; font-size:20px"> DOWNLOAD CONFEDENTIAL RESOURCE INFORMATION</h3>
+                         </div>
+                                <button type="button" id="get_metadata" class="btn btn-warning" style="font-size:16px" onclick="get_encrypted_metadata()">GET</button>
+                        
+                         Sidebar Widget -->
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <!-- Sidebar Widget -->
+                        <div class="sidebar-widget">
+                            <h3 class="sidebar-title" style="color: white; margin-bottom: -40px ; font-size:20px"> ACCESS
+                             RESOURCE INFORMATION</h3>
+                         </div>
+                                <button type="button" id="decrypt_metadata" class="btn btn-warning" style="font-size:20px" onclick="cpabe_metadata_decryption()">Access</button>
+
+                        <!-- Sidebar Widget -->
+                        <br>
+                        <br>
+                        <br>
+                        <!-- Sidebar Widget 
+                        <div class="sidebar-widget" style="margin-left:90px">
+                            <h3 class="sidebar-title" style="color: white; font-size:20px"> SEARCH FOR POLICY ATTRIBUTE</h3>
+                            
+                                <input type="search" placeholder="Search" id="attribute_name">
+                                <button onclick="get_policy_attribute_info()"><i class="fa fa-search"></i></button>
+                                <br>
+                                <div id=div3 style="display:none; background-color: white; border: 1px solid #ccc;">
+                                <table class="table table-bordered product-table">
+                                    <tbody>
+
+                                       <tr>
+                                           <span id="attribute_desc"></span>
+                                       </tr>
+                                    </tbody>
+                                </table>
+                                </div>
+                            
+                        </div>
+                         Sidebar Widget -->
+
+                    </div>
+                   
+                </div>
+                <!-- // Sidebar -->
+            </div>
+
+        </div>
+
+    </div>
+    <br>
+     
+
+    </section>
+
+    
+
+    </div>
+    <!-- ====== // Contact Area ====== -->
+</div>
+
+<div style = "margin-left:-100px; margin-right:-100px; margin-top:-40px">
+    <!-- ====== Footer Area ====== -->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="copyright-text">
+                        <p class="text-white">&copy; 2021 <a href="https://github.com/mnr-18/Privacy-preserving-Resource-Sharing">Privacy Preserving Resource Sharing System</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ====== // Footer Area ====== -->
+
+</div>
+    <!-- ====== ALL JS ====== -->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/lightbox.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/jquery.mixitup.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/typed.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script type="text/javascript">
+      //  document.getElementById("decrypt_metadata").disabled = true;
+    </script>
+
+    <script type="text/javascript"> 
+    load_username = function(){
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+     var response = JSON.parse(xhttp.responseText);
+      //var  response = xhttp.responseText;
+            
+            const res = response.name;
+
+            const capitalized = res.toUpperCase();
+            console.log(capitalized);
+            
+            document.getElementById("user").innerHTML= capitalized;
+            //document.getElementById("user_name").innerHTML= capitalized;
+            
+            
+    }
+  };
+  
+  xhttp.open("GET", "http://localhost:4000/load_username", true);
+  xhttp.send();
+}
+//..............................................
+
+  view_single_resource_info = function(){
+    
+    x = document.getElementById("div1");
+    x.style.display = "block"; 
+
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+     var response = JSON.parse(xhttp.responseText);
+      //var  response = xhttp.responseText;
+
+    //resource with index 0 
+    console.log(response.resource0_name);       
+    document.getElementById("resource0_name").innerHTML=response.resource0_name;
+    document.getElementById("resource0_type").innerHTML=response.resource0_type;
+    document.getElementById("resource0_date").innerHTML=response.resource0_date;
+    document.getElementById("resource0_id").innerHTML= response.resource0_id;
+    document.getElementById("resource0_category").innerHTML= response.resource0_category; 
+    document.getElementById("resource0_owner").innerHTML= response.resource0_owner;
+    document.getElementById("resource0_desc").innerHTML= response.resource0_desc;
+    document.getElementById("resource0_property").innerHTML= response.resource0_property;
+    document.getElementById("resource0_p1").innerHTML =response.resource0_policy;
+
+    document.getElementById("resource0_cert1").innerHTML =response.resource0_cert;
+    console.log(response.resource0_cert);
+
+    //reading user name from database
+    const res = response.name;
+    const capitalized = res.toUpperCase();
+    console.log(capitalized);        
+    document.getElementById("user").innerHTML= capitalized;
+
+    //end of httpx        
+    }
+  };
+
+  xhttp.open("POST", "http://localhost:4000/view_single_resource_info", true);
+    xhttp.setRequestHeader("Content-type", 'application/json; charset=UTF-8')
+    //xhttp.send(JSON.stringify(data));
+    xhttp.send();
+}
+//...........................
+
+// Start of function 1 -> view resource
+// Start of request for object list
+  view_resource_policy_cert = function(){
+
+    x = document.getElementById("div1");
+    x.style.display = "none"; 
+    x = document.getElementById("div2");
+    x.style.display = "block"; 
+    // request for object information from oDir smart contract
+    console.log("resource information");
+    var xhttp = new XMLHttpRequest();
+    
+    xhttp.onreadystatechange = function() {
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+            var response = JSON.parse(xhttp.responseText);
+            //const _ans = response;
+            //console.log(esponse.resource0_cert);
+            console.log(response.resource0_policy);
+            //console.log(response.resource0_metadata);
+
+
+    document.getElementById("resource0_p1").innerHTML=response.resource0_policy;
+
+    document.getElementById("resource0_cert1").innerHTML=response.resource0_cert;
+
+ 
+           
+  } // xhttp.readyState condition end
+       if(xhttp.readyState==4 && xhttp.status==403){
+                      //document.getElementById("try").innerHTML="Error";
+                      alert("Session End.LogIn again");
+
+                    } // if condition end
+    };
+    xhttp.open("POST", "http://localhost:4000/view_resource_policy_cert", true);
+    xhttp.setRequestHeader("Content-type", 'application/json; charset=UTF-8');
+    xhttp.send(); 
+    //xhttp.send(JSON.stringify(data));
+            
+}
+// end of request for object list
+//end of function 1
+//...................................
+
+get_encrypted_metadata= function(){
+  //x = document.getElementById("div1");
+  //          x.style.display = "block"; 
+    
+  // request for object information from oDir smart contract
+            console.log("resource information");
+            var xhttp = new XMLHttpRequest();
+    
+    xhttp.onreadystatechange = function() {
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+            var response = JSON.parse(xhttp.responseText);
+            
+    //console.log(response.resource0_metadata);
+
+    //download cpabe metadata
+    var content = response.resource0_metadata;
+    var dl = document.createElement('a');
+    dl.setAttribute('href', 'data:text/csv;charset=utf-8,' + encodeURIComponent(content));
+    dl.setAttribute('download', 'confedential_resource.txt.cpabe');
+    dl.click();
+
+    //document.getElementById("decrypt_metadata").disabled = false;
+   // document.getElementById("resource0_metadata").innerHTML=response.resource0_metadata;
+ 
+           
+  } // xhttp.readyState condition end
+       if(xhttp.readyState==4 && xhttp.status==403){
+                      //document.getElementById("try").innerHTML="Error";
+                      alert("Session End.LogIn again");
+
+                    } // if condition end
+    };
+    xhttp.open("POST", "http://localhost:4000/view_resource_policy_cert", true);
+    xhttp.setRequestHeader("Content-type", 'application/json; charset=UTF-8');
+    xhttp.send(); 
+    //xhttp.send(JSON.stringify(data));
+
+
+}
+
+//...................................
+
+cpabe_metadata_decryption= function(){
+    
+    console.log("resource information");
+    var xhttp = new XMLHttpRequest();
+    
+    xhttp.onreadystatechange = function() {
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+            //var response = JSON.parse(xhttp.responseText);
+            var response = xhttp.responseText;
+                _ans = response;
+
+    //download cpabe metadata
+    var content = _ans.toString();
+    var dl = document.createElement('a');
+    dl.setAttribute('href', 'data:text/csv;charset=utf-8,' + encodeURIComponent(content));
+    dl.setAttribute('download', 'confedential_resource.txt');
+    dl.click();
+
+/*
+if(_ans === 'yes') {
+  alert("Get resource information!!");
+}// end of ans===yes condition   
+*/
+
+if(_ans === 'no') {
+  alert("Error in making resource confedential information readable");
+}// end of _ans === 'no1' condition   
+
+  } // xhttp.readyState condition end
+       if(xhttp.readyState==4 && xhttp.status==403){
+                      
+                      alert("Session End.LogIn again");
+
+                    } // if condition end
+    };
+    xhttp.open("POST", "http://localhost:4000/cpabe_metadata_decryption", true);
+    xhttp.setRequestHeader("Content-type", 'application/json; charset=UTF-8');
+    xhttp.send(); 
+    //xhttp.send(JSON.stringify(data));
+
+
+}
+//................................................
+
+get_policy_attribute_info = function(){
+
+    var attribute_name = document.getElementById("attribute_name").value;
+
+    data={attribute_name:attribute_name}
+    console.log(data);
+
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+     var response = JSON.parse(xhttp.responseText);
+      //var  response = xhttp.responseText;
+            
+            x = document.getElementById("div3");
+            x.style.display = "block"; 
+            const res = response.name;
+            const res1 = response.desc;
+            console.log(res);
+            console.log(res1);
+            //document.getElementById("attribute_name").innerHTML= response.name;
+            
+           document.getElementById("attribute_desc").innerHTML= response.desc;
+            
+    }
+  };
+  
+  xhttp.open("POST", "http://localhost:4000/get_policy_attribute_info", true);
+  xhttp.setRequestHeader("Content-type", 'application/json; charset=UTF-8');
+  xhttp.send(JSON.stringify(data));
+  //xhttp.send();
+}
+//..............................................
+
+cert_all_info = function(){
+
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+     var response = JSON.parse(xhttp.responseText);
+      //var  response = xhttp.responseText;
+            
+            x = document.getElementById("div2");
+            x.style.display = "block"; 
+
+            const res = response.cert;
+            console.log(res);
+            
+           document.getElementById("cert").innerHTML= response.cert;
+            
+    }
+  };
+  
+  xhttp.open("POST", "http://localhost:4000/cert_all_info", true);
+  xhttp.setRequestHeader("Content-type", 'application/json; charset=UTF-8');
+  //xhttp.send(JSON.stringify(data));
+  xhttp.send();
+
+
+}
+//.............
+
+logout = function(){
+console.log("Request to logout");
+
+          var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+            
+            //var response = JSON.parse(xhttp.responseText);
+            var  response = xhttp.responseText;
+           console.log('logout response back:',response);
+            
+           if(response == 0){
+            window.location.replace('http://localhost:4000/index_main.html');
+           }
+           
+
+       }//end of xhttp.ready state condition
+
+       if(xhttp.readyState==4 && xhttp.status==403){
+
+                      alert("Session End.LogIn again");
+                    }
+    };
+    
+    xhttp.open("GET", "http://localhost:4000/logout", true);
+    xhttp.setRequestHeader("Content-type", 'application/json; charset=UTF-8')
+    //xhttp.send(JSON.stringify(data));
+    xhttp.send();
+
+}
+
+//...............
+
+</script>
+
+
+
+</body>
+
+</html>

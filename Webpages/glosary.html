@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="UTF-8">
+    <title>Glosary- Smart Neighbourhood</title>
+
+    <!-- ====== Google Fonts ====== -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet">
+
+     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/lightbox.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <style>
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: gray;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+label{
+  display: inline-block;
+  background-color: #E49B0F;
+  color: white;
+  padding: 0.5rem;
+  font-family: sans-serif;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  border-radius: 12px;
+  width: 100px;
+  font-size: 14px;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  margin-right: 70px;
+  margin-left: -100px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 12px 100px;
+  transition: 0.3s;
+  font-size: 24px;
+  margin-left: 180px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 60px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  margin-right: 70px;
+  margin-left: -100px;
+  background-color: white;
+}
+
+
+</style>
+
+</head>
+
+<body data-spy="scroll" data-target=".navbar-nav" onload="load_username()">
+
+    <!-- ====== Header ====== -->
+    <header id="header" class="header">
+        <!-- ====== Navbar ====== -->
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand logo" href="index.html">
+                    <img src="assets/images/TRY_TRY.png" alt="logo">
+                </a>
+                <!-- // Logo -->
+
+                <!-- Mobile Menu -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-expanded="false"><span><i class="fa fa-bars"></i></span></button>
+                <!-- Mobile Menu -->
+
+                 <div class="collapse navbar-collapse main-menu" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active"><a class="nav-link" href="http://localhost:4000/index_main.html">HOME</a></li>
+
+                         <div class="dropdown">
+                        <li class="nav-item"><a class="nav-link "><span id="user"></span></a></li>
+
+                        <div class="dropdown-content">
+                        <li class="nav-item"><a class="nav-link" onclick="logout()">LOGOUT</a></li>
+                        </div>
+                        </div>
+
+                        <div class="dropdown">
+                        <li class="nav-item"><a class="nav-link active" href="http://localhost:4000/after_login.html">MENU</a></li>
+                        <div class="dropdown-content">
+                        <li class="nav-item"><a class="nav-link pr0" href="http://localhost:4000/add_resource_metadata.html">ADD RESOURCES</a></li>
+                        <li class="nav-item"><a class="nav-link pr0" href="http://localhost:4000/view_resource.html">VIEW RESOURCES</a></li>
+                        </div>
+                        </div>
+
+                        <li class="nav-item"><a class="nav-link pr0" href="http://localhost:4000/support.html">SUPPORT</a></li>
+
+                        <li class="nav-item"><a class="nav-link pr0" href="http://localhost:4000/Contact_Us.html">CONTACT US</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- ====== // Navbar ====== -->
+
+        <!-- Page Title -->
+        <div class="page-title bg-img section-padding bg-overlay" style="background-image: url(assets/images/1.png); height:50px;">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6 text-center">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // Page Title -->
+    </header>
+    <!-- ====== // Header ====== -->
+
+<div style = " padding-left: 100px;">
+
+        <!-- ====== Contact Area ====== -->
+    <div align="center" >    
+ <section class="blog-section">
+   <!--  <div class="page-title bg-img section-padding bg-overlay" style="background-image: url(assets/images/5.jpg); width:880px;height:700px; margin-left:-380px; margin-top:-70px; margin-bottom:-50px;" > -->
+
+    <div class="page-title bg-img section-padding bg-overlay" style="background-image: url(assets/images/5.jpg);height:1180px;  margin-top:-95px; margin-bottom:-50px; margin-left:-100px">
+        <div class="container">
+            <!-- Section Title -->
+            <div class="row justify-content-center">
+                <div class="col-lg-6 ">
+                    <div class="section-title text-center" style="margin-top:-100px;">
+                        <h2>GET POLICY ATTRIBUTE INFORMATION</h2> 
+                    </div>
+                </div>
+            </div>
+            <!-- //Section Title -->
+
+<div align="center">
+<table class="table table-bordered product-table" style="margin-top: -20px; background-color: white;">
+                                    <tbody>
+                                        <tr>
+                                            <td>Attribute Name</td>
+                                            <td>Defination</td>
+                                            <td>Policy Application</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Age</td>
+                                            <td>The length of time that a person has lived or a thing has existed.</td>
+                                            <td> age > 10</td>
+                                        </tr>
+                                       
+                                        
+                                        <tr>
+                                            <td>Neighbourhood</td>
+                                            <td>A place of settlement, activity, or residence. For example Calgary, Edmonton, Torento.</td>
+                                            <td> (neighbourhood = <a href="#" data-toggle="tooltip1" data-placement="right" title="People who live in Calgary area">calgary</a>) 
+                                            <br>
+                                            or 
+                                            <br>
+                                            (neighbourhood = <a href="#" data-toggle="tooltip2" data-placement="right" title="People who live in Edmonton area">edmonton</a> )
+                                            </td> 
+
+                                        </tr>
+
+                                        <tr>
+                                            <td>Profession </td>
+                                            <td>An act of declaring that one has knowledge as well as experience on particular field.
+                                            For example, Education, Health Science, Business, Government and Public Administration, Arts, Technology and others.
+                                            </td>
+                                            <td> (profession = education) 
+                                            <br>
+                                            or 
+                                            <br>
+                                            (profession = business)
+                                            </td> 
+
+
+                                        </tr>
+                                        
+                                           <tr>
+                                            <td>Club Membership </td>
+                                            <td>An act of declaring that one is involve with a formal association of people with similar interests.
+                                            For example, club1 = Fan-club of cartoon movies, club2 = Fan-club of adventure movies and club3 = Fan-club of horror movies.
+                                            </td>
+                                            <td> (club membership = club1) 
+                                            <br>
+                                            or 
+                                            <br>
+                                            (club membership = club2)
+                                            </td> 
+
+
+                                        </tr>
+                                      
+                                        
+                                    </tbody>
+                                </table>
+
+
+
+
+</div>
+        </div>
+
+    </div>
+    <br>
+     
+
+    </section>
+
+    
+
+    </div>
+    <!-- ====== // Contact Area ====== -->
+</div>
+
+<div style = "margin-left:-100px; margin-right:-100px; margin-top:-40px">
+    <!-- ====== Footer Area ====== -->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="copyright-text">
+                        <p class="text-white">&copy; 2021 <a href="https://github.com/mnr-18/Privacy-preserving-Resource-Sharing">Privacy Preserving Resource Sharing System</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ====== // Footer Area ====== -->
+
+</div>
+    <!-- ====== ALL JS ====== -->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/lightbox.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/jquery.mixitup.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/typed.js"></script>
+    <script src="assets/js/main.js"></script>
+
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" ></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    (function() {
+        $('[data-toggle="tooltip1"]').tooltip();
+        $('[data-toggle="tooltip2"]').tooltip();
+        $('[data-toggle="tooltip3"]').tooltip();
+        $('[data-toggle="tooltip4"]').tooltip();
+        $('[data-toggle="tooltip5"]').tooltip();
+    })();
+</script>
+
+
+    <script type="text/javascript"> 
+    load_username = function(){
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+     var response = JSON.parse(xhttp.responseText);
+      //var  response = xhttp.responseText;
+            
+            const res = response.name;
+
+            const capitalized = res.toUpperCase();
+            console.log(capitalized);
+            
+            document.getElementById("user").innerHTML= capitalized;
+            //document.getElementById("user_name").innerHTML= capitalized;
+            
+            
+    }
+  };
+  
+  xhttp.open("GET", "http://localhost:4000/load_username", true);
+  xhttp.send();
+}
+
+
+
+//.........................................
+
+
+logout = function(){
+console.log("Request to logout");
+
+          var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+            
+            //var response = JSON.parse(xhttp.responseText);
+            var  response = xhttp.responseText;
+           console.log('logout response back:',response);
+            
+           if(response == 0){
+            window.location.replace('http://localhost:4000/index_main.html');
+           }
+           
+
+       }//end of xhttp.ready state condition
+
+       if(xhttp.readyState==4 && xhttp.status==403){
+
+                      alert("Session End.LogIn again");
+                    }
+    };
+    
+    xhttp.open("GET", "http://localhost:4000/logout", true);
+    xhttp.setRequestHeader("Content-type", 'application/json; charset=UTF-8')
+    //xhttp.send(JSON.stringify(data));
+    xhttp.send();
+
+}
+
+
+
+
+
+
+
+
+</script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="UTF-8">
+    <title>Smart Neighbour</title>
+
+    <!-- ====== Google Fonts ====== -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet">
+
+    <!-- ====== ALL CSS ====== -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/lightbox.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="style_login.css">
+
+</head>
+
+<body data-spy="scroll" data-target=".navbar-nav">
+    
+     <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner">
+            <div class="cube1"></div>
+            <div class="cube2"></div>
+        </div>
+    </div>
+    <!-- // Preloader -->
+    
+
+    <!-- ====== Header ====== -->
+    <header id="header" class="header">
+        <!-- ====== Navbar ====== -->
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand logo" href="http://localhost:4000/index_main.html">
+                    <img src="assets/images/TRY_TRY.png" alt="logo">
+                </a>
+                <!-- // Logo -->
+
+                <!-- Mobile Menu -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-expanded="false"><span><i class="fa fa-bars"></i></span></button>
+                <!-- Mobile Menu -->
+
+                <div class="collapse navbar-collapse main-menu" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="http://localhost:4000/index_main.html">HOME</a></li>
+                        
+                        
+                        <li class="nav-item "><a class="nav-link active" href="http://localhost:4000/login_main.html">LOGIN</a></li>
+                        <!--
+                        <li class="nav-item"><a class="nav-link" href="#service">SERVICE</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">PORTFOLIO</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">BLOG</a></li>
+                        <li class="nav-item"><a class="nav-link pr0" href="#contact">CONTACT</a></li>
+                        -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- ====== // Navbar ====== -->
+    </header>
+    <!-- ====== // Header ====== -->
+
+
+    <div class="bg-img">
+      <div class="content">
+        <header>Login</header>
+        <form>
+          <div class="field">
+            <span class="fa fa-user"></span>
+            <input type="text" id="u_name" required placeholder="Username">
+          </div>
+          <div class="field space">
+            <span class="fa fa-lock"></span>
+            <input type="password" id="u_password" class="pass-key" required placeholder="Password">
+          </div>
+          <!--
+          <div class="pass">
+            <a href="#">Forgot Password?</a>
+          </div>
+          -->
+          <br>
+          <div align="center">
+            
+            <button type="button" class="btn btn-secondary" onclick="func1()">LogIn</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+
+    <!-- ====== Footer Area ====== -->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="copyright-text">
+                        <p class="text-white">&copy; 2021 <a href="https://github.com/mnr-18/Privacy-preserving-Resource-Sharing">Privacy Preserving Resource Sharing System</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ====== // Footer Area ====== -->
+
+
+
+
+
+
+     <!-- ====== ALL JS ====== -->
+   <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/lightbox.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/jquery.mixitup.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/typed.js"></script>
+    <script src="assets/js/skill.bar.js"></script>
+    <script src="assets/js/fact.counter.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <script type="text/javascript">
+  
+  func1 = function(){
+          data1 = document.getElementById("u_name").value;
+          console.log(data1);
+          data2 = document.getElementById("u_password").value;
+          console.log(data2);
+
+          //data={username:data1};
+          data={username:data1,password:data2};
+          console.log(data);
+
+
+  if( 0 !== data1.length || 0 !== data2.length){
+          console.log("Send data to server");
+
+          var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+            
+            var response = JSON.parse(xhttp.responseText);
+            //var  response = xhttp.responseText;
+            
+            
+            const res = response.value;
+            console.log('value',res);
+           
+
+            if( response.value == 1){
+              window.location.replace("http://localhost:4000/after_login.html");
+            }
+
+            if( response.value == 2){
+              alert("Please provide correct username!");
+            }
+
+            if( response.value == 3){
+              alert("Please provide correct password!");
+            }
+
+            //document.getElementById("acc_deploy").innerHTML= "Contract address:" + " " +response + "<br>";
+            
+
+                   
+       }//end of xhttp.ready state condition
+
+       if(xhttp.readyState==4 && xhttp.status==403){
+
+                      alert("Session End.LogIn again");
+                    }
+    };
+    
+    xhttp.open("POST", "http://localhost:4000/login_with_device", true);
+    xhttp.setRequestHeader("Content-type", 'application/json; charset=UTF-8')
+    xhttp.send(JSON.stringify(data));
+    //xhttp.send();
+
+} //end of if( 0 !== data1.length) condition
+
+                              
+}
+
+
+
+
+
+
+</script>
+
+
+</body>
+
+</html>

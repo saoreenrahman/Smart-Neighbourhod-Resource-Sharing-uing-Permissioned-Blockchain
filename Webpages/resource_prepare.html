@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="UTF-8">
+    <title>Prepare Resource- Smart Neighbourhood</title>
+
+    <!-- ====== Google Fonts ====== -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet">
+
+     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/lightbox.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <style>
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: gray;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+label{
+  display: inline-block;
+  background-color: #E49B0F;
+  color: white;
+  padding: 0.5rem;
+  font-family: sans-serif;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  border-radius: 12px;
+  width: 120px;
+  font-size: 16px;
+}
+
+
+
+</style>
+
+</head>
+
+<body data-spy="scroll" data-target=".navbar-nav" onload="load_username()">
+
+    <!-- ====== Header ====== -->
+    <header id="header" class="header">
+        <!-- ====== Navbar ====== -->
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand logo" href="index.html">
+                    <img src="assets/images/TRY_TRY.png" alt="logo">
+                </a>
+                <!-- // Logo -->
+
+                <!-- Mobile Menu -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-expanded="false"><span><i class="fa fa-bars"></i></span></button>
+                <!-- Mobile Menu -->
+
+                 <div class="collapse navbar-collapse main-menu" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active"><a class="nav-link" href="http://localhost:4000/index_main.html">HOME</a></li>
+
+                         <div class="dropdown">
+                        <li class="nav-item"><a class="nav-link "><span id="user"></span></a></li>
+
+                        <div class="dropdown-content">
+                        <li class="nav-item"><a class="nav-link" onclick="logout()">LOGOUT</a></li>
+                        </div>
+                        </div>
+
+                        <div class="dropdown">
+                        <li class="nav-item"><a class="nav-link active" href="http://localhost:4000/after_login.html">MENU</a></li>
+                        <div class="dropdown-content">
+                        <li class="nav-item"><a class="nav-link " href="http://localhost:4000/add_resource_metadata.html">ADD RESOURCES</a></li>
+                        <li class="nav-item"><a class="nav-link pr0" href="http://localhost:4000/view_resource.html">VIEW RESOURCES</a></li>
+                        <li class="nav-item"><a class="nav-link pr0" href="http://localhost:4000/glosary.html">Glosary</a></li>
+                        </div>
+                        </div>
+
+                        <li class="nav-item"><a class="nav-link pr0" href="http://localhost:4000/support.html">SUPPORT</a></li>
+
+                        <li class="nav-item"><a class="nav-link " href="http://localhost:4000/Contact_Us.html">CONTACT US</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- ====== // Navbar ====== -->
+
+        <!-- Page Title -->
+        <div class="page-title bg-img section-padding bg-overlay" style="background-image: url(assets/images/1.png); height:50px;">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6 text-center">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // Page Title -->
+    </header>
+    <!-- ====== // Header ====== -->
+
+<div style = " padding-left: 100px;">
+
+        <!-- ====== Contact Area ====== -->
+    <div align="center" >    
+    <section class="blog-section">
+     <div class="page-title bg-img section-padding bg-overlay" style="background-image: url(assets/images/5.jpg);height:1200px;  margin-top:-95px; margin-left:-100px; margin-bottom:-50px;">
+        <div class="container">
+
+            <!-- Section Title -->
+            <div class="row justify-content-center">
+                <div class="col-lg-6 " style="margin-top:-50px ;">
+                    <div class="section-title text-center">
+                        <h2>Prepare Your Resource</h2>
+                        <!--<h4>MAKE RESOURCE INFORMATION CONFEDENTIAL</h4>-->
+                    </div>
+                </div>
+            </div>
+            <!-- //Section Title -->
+
+            <!-- Contact Form -->
+            <div class="row justify-content-center" >
+                <div class="col-lg-10" style="margin-top:-30px ;">
+                    <h4 style="color:white"> Provide Resource Information</h4>
+                    <div class="row">
+                    <div class="pull-left" style="margin-left: 30px;">
+                    <button class="btn btn-info" data-toggle="tooltip3" data-placement="left" title="Resource Name, e.g Tom's Trip to Moon  etc."><i class="fa fa-info-circle"></i></button>
+                    </div>
+                            <div class="col-lg-6 form-group">
+                            
+                                <input type="text" id="o_name"  class="form-control" style="width: 800px"  name="name" required placeholder="Resource Name*" required>
+                            </div>
+                    </div>
+
+                        <div class="row">
+                        <div class="pull-left" style="margin-left: 30px;">
+                        <button class="btn btn-info" data-toggle="tooltip4" data-placement="left" title="Resource Type, e.g Movie etc."><i class="fa fa-info-circle"></i></button>
+                        </div>
+
+
+                            <div class="col-lg-6 form-group">
+                                <input type="text" id="o_type" class="form-control" style="width: 800px" name="description" required placeholder="Resource Type*" required>
+                            </div>
+                        </div>
+                <br>
+                <br>
+
+                 <!-- Content -->
+                 <p style="color:white; font-size: 32px;"><b>Step1:</b> Get your resource certificate <a class="btn btn-primary me-2"role="button" onclick="get_certificate()"><i class="fas fa-download"></i> Download</a></p>
+                 <br>
+                 <br>
+                 <br>
+
+<p style="color:white; font-size: 30px;"><b>Step2:</b> Encrypt Resource <a class="btn btn-primary me-2" role="button" onclick="show_encrypt()"><i class="fa fa-arrow-down"></i></a></p>
+                 <br>
+
+                <div id="div1" style="display:none" class="tabcontent">
+                <div class="row">
+                        <div class="pull-left" style="margin-left:30px ;">
+                        <button class="btn btn-info" data-toggle="tooltip1" data-placement="left" title="Password, e.g Ex@mple1"><i class="fa fa-info-circle"></i></button>
+                        </div>
+
+                        <div class="col-lg-6 form-group">
+                            <input type="text" id="enc_pass" class="form-control" style="width: 800px" name="key" placeholder=" Password*" required/>
+                        </div>
+                </div>
+                
+
+                <div class="row">
+                        <div class="pull-left" style="margin-left:30px ;">
+                        <button class="btn btn-info" data-toggle="tooltip2" data-placement="left" title="Password, e.g Ex@mple1"><i class="fa fa-info-circle"></i></button>
+                        </div>
+
+                        <div class="col-lg-6 form-group">
+                            <input type="text" class="form-control" id="enc_pass_repeat" style="width: 800px" name="key" placeholder=" Confirm Password*" required>
+                        </div>
+                </div>
+
+                    <br>
+                     <div class="col-lg-6 form-group"> 
+                            <p style="color:white; font-size: 21px; margin-left: -410px;"><input type="file" id="enc_upload_data" required /> </p>
+                        </div>
+                
+                        <br>
+                <div class="form-btn text-center">
+                        <button type="button" class="btn btn-warning" onclick="aes_encryption()">DOWNLOAD ENCRYPTED RESOURCE FILE  <a><i class="fa fa-file-archive-o"></i></a></button>
+                </div>
+
+                </div>        
+
+                
+                <br>
+                <br> 
+                <p style="color:white; font-size: 30px;"><b>Step3:</b> Upload resource in the cloud <a class="btn btn-primary me-2"role="button" onclick="cloud()"><i class="fa fa-cloud-upload" style="font-size:24px"></i></a>
+                </p>
+
+                
+                <br>
+                <br>
+                
+                </div>  
+
+                 <br> 
+                 <br>
+                <p style="color:white; font-size: 30px;"><b>Step4:</b> Attach policy to your resource <a class="btn btn-primary me-2"role="button" onclick="policy()"><i class="fa fa-arrow-down"></i></a></p>
+                <br>
+
+                <br>
+                <div id="div2" style="display:none" class="tabcontent">
+                    <br>
+
+                     <div class="row">
+                    <div class="pull-left" style="margin-left:30px ;">
+                    <button class="btn btn-info" data-toggle="tooltip5" data-placement="left" title="Policy refers to the users who can access this resource. e.g policy for a resource can be: (age >16 and club_member = 1). That is, users who are more that 16 years old and are member of club 1 can access this resource "><i class="fa fa-info-circle"></i></button>
+                    </div>
+                            <div class="col-lg-6 form-group">
+                            <input type="text" id="o_policy" class="form-control" style="width: 800px" name="key" placeholder="Policy*" required>
+                        </div>
+                    </div>
+
+                
+
+                    <div class="form-btn text-center">
+                        <button type="button" class="btn btn-warning" onclick="create_cpabe_metadata()">SUBMIT</button>
+                    </div>
+                 <!-- Content -->
+                </div>
+            </div>
+            <!-- // Contact Form -->
+            <br>
+            
+            <div class="form-btn text-center" >
+                            <a href="http://localhost:4000/after_login1.html" style="margin-left:1200px"> 
+                            <button class="btn btn btn-warning btn-md btn-sm ">Go Back</button>
+                            </a>
+                        </div>
+        </div>
+    </div>
+    </section>
+    <div>
+    <!-- ====== // Contact Area ====== -->
+</div>
+
+<div style="margin-top:-15px; margin-left:-100px;">
+    <!-- ====== Footer Area ====== -->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="copyright-text">
+                        <p class="text-white">© 2021 <a href="https://github.com/mnr-18/Privacy-preserving-Resource-Sharing">Privacy Preserving Resource Sharing System</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ====== // Footer Area ====== -->
+
+</div>
+    <!-- ====== ALL JS ====== -->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/lightbox.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/jquery.mixitup.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/typed.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script type="text/javascript" src="http://getbootstrap.com/2.3.2/assets/js/bootstrap-tooltip.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" ></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+document.getElementById("encrypt_btn").disabled = true;
+    </script>
+    
+<script type="text/javascript">
+    (function() {
+        $('[data-toggle="tooltip1"]').tooltip();
+        $('[data-toggle="tooltip2"]').tooltip();
+        $('[data-toggle="tooltip3"]').tooltip();
+        $('[data-toggle="tooltip4"]').tooltip();
+        $('[data-toggle="tooltip5"]').tooltip();
+    })();
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+
+<script type="text/javascript">
+/*
+var message = 'amit';  
+var key= 'abc123XYZ';
+
+function encrypt(message = '', key = ''){
+    var message = CryptoJS.AES.encrypt(message, key);
+    console.log(message.toString());
+    return message.toString();
+}
+function decrypt(message = '', key = ''){
+    var code = CryptoJS.AES.decrypt(message, key);
+    var decryptedMessage = code.toString(CryptoJS.enc.Utf8);
+
+    return decryptedMessage;
+}
+
+var m = "U2FsdGVkX1+EKGofl/VxnVzBnEuNfFv+PE46lvXDscM=";
+console.log(encrypt(message, key));
+console.log(decrypt(m, key));
+
+
+encrypt= function(){
+
+    var encrypted = CryptoJS.AES.encrypt(message, key);  
+    console.log(encrypted.toString());
+
+    //download cpabe metadata
+    var content = encrypted.toString();
+    var dl = document.createElement('a');
+    dl.setAttribute('href', 'data:text/csv;charset=utf-8,' + encodeURIComponent(content));
+    dl.setAttribute('download', 'confedential_data.enc');
+    dl.click();
+
+
+} */
+
+aes_decryption= function(){
+
+var data1 = document.getElementById("enc_pass").value;
+
+const selectedFile = document.getElementById('dec_upload_data').files[0];  
+//console.log(selectedFile);
+//var file = selectedFile.toString();
+
+var m = "U2FsdGVkX1/vZD8b07d9t1/FDMj4ff2BSSX87Q6OWUw=";        
+var decrypted = CryptoJS.AES.decrypt(m, "12345678");
+console.log(decrypted.toString(CryptoJS.enc.Utf8));
+
+
+//download cpabe metadata
+    var content = decrypted.toString(CryptoJS.enc.Utf8);
+    var dl = document.createElement('a');
+    dl.setAttribute('href', 'data:text/csv;charset=utf-8,' + encodeURIComponent(content));
+    dl.setAttribute('download', 'confedential_data.txt');
+    dl.click();
+
+
+}
+
+
+aes_encryption= function(){
+        
+        var data1 = document.getElementById("enc_pass").value;
+        var data2 = document.getElementById("enc_pass_repeat").value;
+        var data3 = document.getElementById("enc_upload_data").value;
+
+
+
+        if(data1.length == 0 && 0 == data2.length){
+            alert("Please Provide Password");
+        }
+
+        if(data1 != data2){
+            alert("Password does not match");
+        }
+
+        if(data3.length == 0){
+            alert("Please upload resource");
+        }
+
+        if(data1 == data2 && data3.length != 0 && data1.length != 0 && data2.length != 0){
+
+
+        const selectedFile = document.getElementById('enc_upload_data').files[0];  
+        console.log(selectedFile);
+        var file = selectedFile.toString();    
+
+        localStorage.setItem("localData", JSON.stringify(data2)); 
+
+    //encrypt 
+    var encrypted = CryptoJS.AES.encrypt(file, data1);  
+    console.log(encrypted.toString());
+
+    
+
+    //download cpabe metadata
+    var content = encrypted.toString();
+    var dl = document.createElement('a');
+    dl.setAttribute('href', 'data:text/csv;charset=utf-8,' + encodeURIComponent(content));
+    dl.setAttribute('download', 'confedential_data.enc');
+    dl.click(); 
+        
+        }
+
+}
+
+
+
+//.......Modification Start................
+
+
+show_encrypt= function(){
+  x = document.getElementById("div1");
+            x.style.display = "block"; 
+
+}
+
+
+
+
+policy = function(){
+  x = document.getElementById("div2");
+            x.style.display = "block"; 
+
+}
+
+var link = "www.onedrive.com";
+
+cloud = function(){
+
+//var link = "www.onedrive.com";
+
+
+//download cpabe metadata
+    var content = link.toString();
+    var dl = document.createElement('a');
+    dl.setAttribute('href', 'data:text/csv;charset=utf-8,' + encodeURIComponent(content));
+    dl.setAttribute('download', 'link.txt');
+    dl.click();
+
+
+
+}
+
+//...........................
+get_certificate = function(){
+
+//document.getElementById("encrypt_btn").disabled = false;
+
+
+var cert = "-----BEGIN CERTIFICATE-----MIICmDCCAYCgAwIBAgIUMUp3fWMsQys2xCc+0tigjI5pGFkwDQYJKoZIhvcNAQELBQAwZzELMAkGA1UEBhMCVVMxDjAMBgNVBAgMBVRleGFzMQ8wDQYDVQQHDAZBdXN0aW4xJzAlBgNVBAoMHlJlc291cmNlIENlcnRpZmljYXRlIEF1dGhvcml0eTEOMAwGA1UEAwwFTXkgQ0EwHhcNMjExMDExMjE0NTM4WhcNMjExMTEwMjE0NTM4WjAdMRswGQYDVQQDDBJUb20ncyB0cmlwIHRvIG1vb24wWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAAQy215IDwZ8+3nBdIDB8fkZYi4oPv1BAax16YSOCLjgTomA0lzDwAXwM4yRgGhCDMIHXbzJ8FZnL7ki5E5f5Od2o1EwTzBNBgNVHREERjBEgkIweENCRDhGNjAwMzM3RjExOTExMjU4NEMyQTM4QkRFNzE2NjQxMEE4NDI3N0I0MEQ1QkQ5REQ1OEFFOTRCMjQzNzEwDQYJKoZIhvcNAQELBQADggEBACc5rbqPMMzWURrzJzGGQrczcHJg0vT7nxrbtbycmbXfiZDEMdDt9DpJPX54j5XIdhmJJp/AGGNS2QQqAehxj9XxG1vIUdSgItNiLjQCC/xCc+b7ZU1CLX5K8nr2PdufVgFpInx2TgtIPN/oA+kd5qdPtD3xj72igsDztCYsTuXHz6ralnmlJ2F8JEDJ0gSfZpGWC3OOPWnPP1zgzjd/YtE2QBqkH/FTA5HQYmHS5bZ1LisszwbqRqJv/as596IZEBgrxEznKAnlEwZuafRdxB9o9t2zcMZXlSFMpemLXKbB5gRmUGtD5wPOkkyxu7KnPHt7rAFnymIm6l53NIWh8dg=-----END CERTIFICATE-----"
+
+//download cpabe metadata
+    var content = cert.toString();
+    var dl = document.createElement('a');
+    dl.setAttribute('href', 'data:text/csv;charset=utf-8,' + encodeURIComponent(content));
+    dl.setAttribute('download', 'resource_certificate.crt');
+    dl.click();
+}
+
+//......................
+
+
+//Start Function create_cpabe_metadata()
+create_cpabe_metadata= function(){
+          
+    var data1 = link;
+    var data2 = document.getElementById("o_policy").value;
+    
+    var str = localStorage.getItem("localData");
+    var pass = JSON.parse(str);
+    console.log(pass);
+
+    var data3 = document.getElementById("o_name").value;
+    var data4 = document.getElementById("o_type").value;
+
+
+
+  if(data2.length == 0){
+    alert("Please provide the policy!");
+  }
+
+  if(data3.length == 0){
+    alert("Please provide resource name!");
+  }
+
+  if(data3.length == 0){
+    alert("Please provide resource type!");
+  }
+
+  if(pass.length == 0){
+    alert("Please encrypt your resource!");
+  } 
+
+  //if( data2.length ==! 0 ){
+
+    console.log("Sending data to server");
+    data = {link:data1,policy:data2, key: pass, name:data3, type: data4}
+    console.log(data);
+
+    console.log("Metadata Create");
+    var xhttp = new XMLHttpRequest();
+
+
+    xhttp.onreadystatechange = function() {
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+            //var response = JSON.parse(xhttp.responseText);
+            var response = xhttp.responseText;
+
+            console.log(response);
+            
+            const _ans = response;
+            if(_ans === 'yes') {
+  //code goes here
+  alert("All Done! Now go back to previous page click Upload Resource button");
+  
+
+}// end of ans===yes condition   
+
+
+if(_ans === 'no') {
+  //code goes here
+  alert("Error in information confirmation!");
+
+}// end of _ans === 'no1' condition   
+
+
+       }//end of xhttp.ready state condition
+
+       if(xhttp.readyState==4 && xhttp.status==403){
+                      
+                      alert("Session End.LogIn again");
+                    }
+    };
+    xhttp.open("POST", "http://localhost:4000/create_cpabe_metadata", true);
+    xhttp.setRequestHeader("Content-type", 'application/json; charset=UTF-8')
+    //xhttp.send();
+    xhttp.send(JSON.stringify(data));
+
+//} //end of if condition
+
+                      
+} //End Function create_cpabe_metadata()
+
+
+//.........................................
+
+  load_username = function(){
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+     var response = JSON.parse(xhttp.responseText);
+      //var  response = xhttp.responseText;
+            
+            const res = response.name;
+
+            const capitalized = res.toUpperCase();
+            console.log(capitalized);
+            
+            document.getElementById("user").innerHTML= capitalized;
+            //document.getElementById("user_name").innerHTML= capitalized;
+            
+            
+    }
+  };
+  
+  xhttp.open("GET", "http://localhost:4000/load_username", true);
+  xhttp.send();
+}
+
+
+
+logout = function(){
+console.log("Request to logout");
+
+          var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+            
+            //var response = JSON.parse(xhttp.responseText);
+            var  response = xhttp.responseText;
+           console.log('logout response back:',response);
+            
+           if(response == 0){
+            window.location.replace('http://localhost:4000/index_main.html');
+           }
+           
+
+       }//end of xhttp.ready state condition
+
+       if(xhttp.readyState==4 && xhttp.status==403){
+
+                      alert("Session End.LogIn again");
+                    }
+    };
+    
+    xhttp.open("GET", "http://localhost:4000/logout", true);
+    xhttp.setRequestHeader("Content-type", 'application/json; charset=UTF-8')
+    //xhttp.send(JSON.stringify(data));
+    xhttp.send();
+
+}
+</script>
+
+
+    
+</body>
+
+</html>
