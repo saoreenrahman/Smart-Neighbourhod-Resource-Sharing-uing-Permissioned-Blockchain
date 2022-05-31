@@ -8,11 +8,6 @@ const fileUpload = require('express-fileupload');
 var session = require('express-session');
 
 
-
-
-const secret = 'secret';
-
-
 app.use( bodyParser.json() );
 app.use(bodyParser.urlencoded({
     extended: true
@@ -76,7 +71,7 @@ const lib = require("./aas.js");
 const lib_client = require("./client_side");
 
 //CPABE Encryption
-const shell = require("./lsExec");
+const shell = require("./CPABE");
 
 //App running on port 4000
 
