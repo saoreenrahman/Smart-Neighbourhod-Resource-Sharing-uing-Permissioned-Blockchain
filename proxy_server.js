@@ -31,7 +31,7 @@ app.get('/', (req,res)=>{
 
 //add resource
 app.get('/', (req,res)=>{
-    res.sendFile('add_resource_v1.html');
+    res.sendFile('share_resource.html');
 });
 
 //Contact Us
@@ -54,7 +54,7 @@ app.get('/', (req,res)=>{
 });
 
 app.get('/', (req,res)=>{
-    res.sendFile('view_resource_single_page.html');
+    res.sendFile('access_resource_information.html');
 });
 
 app.get('/', (req,res)=>{
