@@ -77,15 +77,6 @@ pyProg.stdout.on('data', function (data) {
 // EC Signature Generation
 function ec_sig_gen_for_add_resource(info, cert, desc, policy, metadata) {
 
-//console.log(info, cert, desc, policy, metadata);
-
-/*
-fs.writeFile('user_input_resource_id.txt', index, function (err) {
-  if (err) return console.log(err);
-  console.log('written in the user_input_resource_id.txt file - > index');
-})*/
-
-
 const { spawn } = require('child_process');
 const pyProg = spawn('python', ['/home/rimjhim/front_end/JWT_token/token_simplify/EC/EC_Client/ec_sign_gen_client.py']);
 
