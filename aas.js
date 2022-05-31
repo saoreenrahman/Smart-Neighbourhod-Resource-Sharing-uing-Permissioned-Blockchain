@@ -5,7 +5,6 @@ function ring_sig_verify() {
 
 const { spawn } = require('child_process');
 const pyProg = spawn('python', ['/home/rimjhim/front_end/JWT_token/token_simplify/Ring/Ring_Server/auth_sig_ver_aas.py']);
-//const pyProg = spawn('python', ['/home/rimjhim/front_end/JWT_token/token_simplify/UI_Ring/auth_sig_ver.py']);
 
 
 pyProg.stdout.on('data', function (data) {
@@ -36,7 +35,7 @@ function ring_sig_verify_rid() {
 
 const { spawn } = require('child_process');
 const pyProg = spawn('python', ['/home/rimjhim/front_end/JWT_token/token_simplify/Ring/Ring_Server/auth_sig_ver_aas_rid.py']);
-//const pyProg = spawn('python', ['/home/rimjhim/front_end/JWT_token/token_simplify/UI_Ring/auth_sig_ver.py']);
+
 
 
 pyProg.stdout.on('data', function (data) {
