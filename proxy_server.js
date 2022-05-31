@@ -23,6 +23,17 @@ app.use(session({
 app.use(express.static('./'));
 app.use(express.static('./webpages'));
 
+app.get('/', (req,res)=>{
+    res.sendFile('index.html');
+});
+
+app.get('/', (req,res)=>{
+    res.sendFile('login.html');
+});
+
+app.get('/', (req,res)=>{
+    res.sendFile('after_login.html');
+});
 
 //add resource
 app.get('/', (req,res)=>{
