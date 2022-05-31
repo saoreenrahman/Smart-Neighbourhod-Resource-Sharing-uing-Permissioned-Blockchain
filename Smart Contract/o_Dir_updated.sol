@@ -1,8 +1,7 @@
 pragma solidity ^0.5.15;
 
 contract oDir{
-    //controlled by BA only but accessible by any user
-   // bytes32[] Oid; // object id
+    
     struct objDescription{
         bytes32 Oid; // object id
         uint obj;
@@ -16,11 +15,10 @@ contract oDir{
         
         uint sizeOfMapping;
         mapping(uint => uint) myMappingInStruct;
-        mapping(uint => uint) myMappingInStruct1;
         // object state
     }
     mapping(bytes32 => objDescription) public objects;
-    //objDescription[] public objects; //array of objects
+   
     
     objDescription myVariable;
     
@@ -50,9 +48,7 @@ contract oDir{
         objects[_oid].address_objPropRep = _objPropRep;
         objects[_oid].abi_objPropRep = _abiObjPropRep;
         myVariable.myMappingInStruct[myVariable.obj++] = _obj;
-        //uint a =  uint(myVariable.Oid);
-        //myVariable.myMappingInStruct1[a++];
-        //myVariable.myMappingInStruct1[myVariable.Oid] = _oid;
+       
     }
     
     function updateResource (bytes32 _oid, string memory _oDesc) public {
@@ -85,40 +81,12 @@ contract oDir{
     }
     
     
-/*
-    function addValue1(uint _someUint, string memory _pid, string memory _oDesc, address _objACC, string memory _abiObjACC, address _objPropRep, string memory _abiObjPropRep) public {
-          //objects[_oid].Oid = _oid;
-       // objects[_oid].pid = _pid;
-        //objects[_oid].pk = msg.sender;
-        //objects[_oid].ODesc = _oDesc;
-        //objects[_oid].address_objACC = _objACC;
-        //objects[_oid].abi_objACC = _abiObjACC;
-        //objects[_oid].address_objPropRep = _objPropRep;
-        //objects[_oid].abi_objPropRep = _abiObjPropRep;
-        
-        //myVariable.myMappingInStruct[myVariable.Oid++] = _oid;
-        myVariable.myMappingInStruct[myVariable.oid++] = _someUint;
-        myVariable.myMappingInStruct[myVariable.pid++] = _pid;
-        myVariable.myMappingInStruct[myVariable.pk++] = msg.sender;
-        myVariable.myMappingInStruct[myVariable.ODesc++] = _oDesc;
-        myVariable.myMappingInStruct[myVariable.address_objACC++] = _objACC;
-        myVariable.myMappingInStruct[myVariable.abi_objACC++] = _abiObjACC;
-        myVariable.myMappingInStruct[myVariable.address_objPropRep++] = _objPropRep;
-        myVariable.myMappingInStruct[myVariable.abi_objPropRep++] = _abiObjPropRep;
-        
-    }
-    
-    */
+
     
     function getMappingValue() public view returns (uint[] memory, bytes32) {
-        //bytes32 _oid
-        //uint a =  uint(objects.Oid);
-        
-        //uint[] memory aa = new uint[](a);
+     
         uint[] memory memoryArray = new uint[](myVariable.obj);
-        //uint[] memory mArray = new uint[](uint(myVariable.Oid));
         
-        //uint[] memory memoryArray = new uint[](myVariable.Oid);
         for(uint i = 0; i < myVariable.obj; i++) {
             memoryArray[i] = myVariable.myMappingInStruct[i];
             
