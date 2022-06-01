@@ -9,6 +9,10 @@ Cryptographic Libraries:
   
   CPABE toolkit
   
+  CEDSA library
+  
+  Ring Signature (https://link.springer.com/chapter/10.1007/3-540-45682-1_32 , https://eprint.iacr.org/2004/027.pdf)
+  
 Software Requirements:
 
   Node.js
