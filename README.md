@@ -3,6 +3,8 @@ A resource sharing using permissioned blockchain is an approach to empower neigh
 
 System Architecture:
 
+![system_architecture](https://user-images.githubusercontent.com/93157246/171309525-f5950664-a32c-417d-aa71-d9b76bd8cccf.png)
+
 
 User Interaction Flow Diagram
 
