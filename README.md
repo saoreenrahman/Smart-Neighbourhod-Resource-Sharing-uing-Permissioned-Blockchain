@@ -26,7 +26,7 @@ Software Requirements:
   1.Run local geth nodes by creating private Ethereum network. 
     (link: https://medium.com/swlh/how-to-set-up-a-private-ethereum-blockchain-c0e74260492c)
     
-  2. Use Remix IDE(https://medium.com/swlh/how-to-set-up-a-private-ethereum-blockchain-c0e74260492c) to run all the smart contracts.
+  2. Use Remix IDE(https://remix.ethereum.org/) to run all the smart contracts.
   3. 
   4. Use Node.js to execute "proxy_server.js" and "client_side.js"
   5. 
