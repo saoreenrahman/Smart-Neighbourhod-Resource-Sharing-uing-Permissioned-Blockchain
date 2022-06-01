@@ -8,7 +8,7 @@ System Architecture:
 
 User Interaction Flow Diagram:
 ![user_interaction_flow](https://user-images.githubusercontent.com/93157246/171309528-e4059a83-4769-44eb-ae67-6b1981f1a871.png)
-[](url)
+
 
 Implementation Overview:
 ![implementation_overview](https://user-images.githubusercontent.com/93157246/171310113-a9377640-7a2a-4c7b-bc29-976d0b324984.png)
