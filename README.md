@@ -31,7 +31,5 @@ Software Requirements:
     (link: https://medium.com/swlh/how-to-set-up-a-private-ethereum-blockchain-c0e74260492c)
     
   2. Use Remix IDE(https://remix.ethereum.org/) to run all the smart contracts.
-  3. 
-  4. Use Node.js to execute "proxy_server.js" and "client_side.js"
-  5. 
-  6. Use python (version>3) to run python codes.
+  3. Use Node.js to execute "proxy_server.js" and "client_side.js" 
+  4. Use python (version>3) to run python codes.
